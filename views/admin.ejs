@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <title>Admin page</title>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <body>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+     
+      <a class="navbar-brand" href="#">Let's Travel</a>
+    
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/admin">Admin</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-secondary btn-logout">Log Out</button>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 ">
+          <input class="form-control mr-sm-2 " type="search" placeholder="Phone Number" aria-label="Search">
+          <button class="btn btn-primary my-2 my-sm-0" type="submit">Call me</button>
+        </form>
+      </div>
+    </nav>
+    </header>
+    <main>
+      <div class="container page-wrapper">
+        <h1>Admin Page</h1>
+        <hr>
+        <div class="row">
+          <div class="col-3">
+            <div class="card">
+              <div class="card-block">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <a class="nav-link active" id="v-pills-articles-tab" data-toggle="pill" href="#v-pills-articles" role="tab" aria-controls="v-pills-articles" aria-selected="true">Articles</a>
+                  <a class="nav-link" id="v-pills-mails-tab" data-toggle="pill" href="#v-pills-mails" role="tab" aria-controls="v-pills-mails" aria-selected="false">Mail</a>
+                  <a class="nav-link" id="v-pills-callback-tab" data-toggle="pill" href="#pills-callback" role="tab" aria-controls="v-pills-callback" aria-selected="false">Call Back request</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-9">
+            <div class="card">
+              <div class="card-block">
+                <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-articles" role="tabpanel" aria-labelledby="v-pills-articles-tab"><button class="btn btn-primary create-post-btn">Post Article</button>
+                
+                  <div class="articles">
+                  
+                </div>
+              </div>
+                
+               <div class="tab-pane fade" id="v-pills-mails" role="tabpanel" aria-labelledby="v-pills-mails-tab">Mail</div>
+                <div class="tab-pane fade" id="pills-callback" role="tabpanel" aria-labelledby="v-pills-callback-tab">Call back request..</div>
+                <div class="tab-pane fade" id="create-post" role="tabpanel" aria-labelledby="create-post-tab">
+                  <h2>Create post..</h2>
+                  <form class="create-form">
+                    <div class="form-group">
+                      <label for="title-form">Title</label>
+                      <input type="text" class="form-control" id="title-form" placeholder="Title">
+                      
+                </div>
+                <div class="form-group">
+                  <label for="country-form">Country</label>
+                  <input type="text" class="form-control" id="country-form" placeholder="Country">
+            </div>  
+            <div class="form-group">
+              <label for="Image-form">Image url</label>
+              <input type="text" class="form-control" id="Image-form" placeholder="Image-Url">
+              <p>Or</p>
+              <div class="form-group">
+                <label for="Image-file-choose">Image Location</label>
+                <input type="file" class="form-control" id="Image-file-choose">
+              </div>
+              
+        </div>
+        <div class="form-group">
+          <label for="Message-form">Message</label>
+         <textarea class="form-control" id="Message-form" rows="5"></textarea>
+    </div>  
+    <button class="btn btn-primary">Create Post</button>
+
+                </form>
+              </div>
+
+              <!--Update Form-->
+              <div class="tab-pane fade" id="v-pills-update-post" role="tabpanel" aria-labelledby="update-post-tab">
+                <h2>Update post..</h2>
+                <form class="update-form">
+                  <div class="form-group">
+                    <label for="update-title-form">Title</label>
+                    <input type="text" class="form-control" id="update-title-form" placeholder="Title">
+                    
+              </div>
+              
+            
+      
+      <div class="form-group">
+        <label for="update-Message-form">Message</label>
+       <textarea class="form-control" id="update-Message-form" rows="5"></textarea>
+  </div>  
+  <button class="btn btn-primary">Update Post</button>
+
+              </form>
+            </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </main>
+
+
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+          <script type="text/javascript" src=/js/bootstrap.min.js></script>
+          <script type="text/javascript" src="../js/posts.js"></script>
+          <script type="text/javascript" src="/admin/js/create-post.js"></script>
+          <script src="/admin/js/delete-posts.js"></script>
+          <script src="/admin/js/update-post.js"></script>
+          <script src="/admin/js/callback-request.js"></script>
+          <script src="/admin/js/email.js"></script>
+          <script src="/admin/js/main.js"></script>
+          
+        </body>
+
+</html>
